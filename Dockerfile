@@ -26,7 +26,9 @@ RUN set -eux \
   && echo "    StrictHostKeyChecking no" >> /etc/ssh/ssh_config \
   && echo "    UserKnownHostsFile /dev/null" >> /etc/ssh/ssh_config \
   && echo "\n################## clear apt cache ##################" \
-  && rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get autoremove
+  && rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get autoremove \
+  && echo "\n################## mkdir /var/run/sshd ##########" \
+  && mkdir -p /var/run/sshd
 
 ###########################################################################
 # VOLUME
