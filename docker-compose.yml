@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  ubuntu:
+    build:
+      context: ./
+    container_name: ubuntu
+    hostname: ubuntu
+    volumes:
+      - ./ubuntu/cron.d:/etc/cron.d
+      - ./ubuntu/data:/data
+    ports:
+      - 1022:22
