@@ -28,8 +28,11 @@ RUN set -eux \
   && echo "\n################## clear apt cache ##################" \
   && rm -rf /var/lib/apt/lists/* && apt-get clean && apt-get autoremove \
   && echo "\n################## mkdir /var/run/sshd ##########" \
-  && mkdir -p /var/run/sshd
-
+  && mkdir -p /var/run/sshd \
+  && echo "\n################## sed /etc/sudoers ##########" \
+  && sed -i 's|%sudo	ALL=(ALL:ALL) ALL|%sudo ALL=(ALL:ALL) NOPASSWD: ALL|' /etc/sudoers \
+  && echo "\n################## sed /etc/ssh/sshd_config ##########" \
+  && sed -i 's|#PasswordAuthentication yes|PasswordAuthentication no|' /etc/ssh/sshd_config
 ###########################################################################
 # VOLUME
 ###########################################################################
