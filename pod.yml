@@ -1,0 +1,10 @@
+piVersion: v1 
+kind: Pod 
+metadata: 
+  name: test 
+spec: 
+  containers: 
+    - name: test 
+      image: test 
+      stdin: true 
+      tty: true
