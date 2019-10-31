@@ -2,7 +2,7 @@
 nodaemon=true
 logfile=/tmp/supervisord.log
 logfile_maxbytes=10MB
-logfile_backups=10
+logfile_backups=3
 loglevel=info
 pidfile=/tmp/supervisord.pid
 
