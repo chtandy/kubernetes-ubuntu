@@ -9,4 +9,4 @@ services:
       - ./ubuntu/cron.d:/etc/cron.d
       - ./ubuntu/data:/data
     ports:
-      - 1022:22
+      - '1022:22'
