@@ -11,7 +11,7 @@ ADD ubuntu/conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ###########################################################################
 # RUN
 RUN set -eux \
-  echo "\n################## dash > bash ###################" \
+  && echo "\n################## dash > bash ###################" \
   && mv /bin/sh /bin/sh.old && ln -s bash /bin/sh \
   && echo "\n################## apt update ###################" \
   && apt-get update  && apt-get install -y \
