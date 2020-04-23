@@ -22,6 +22,7 @@ RUN set -eux \
   && echo 'export LANG="zh_TW.UTF-8"' >> /root/.bashrc \
   && echo 'export LC_ALL="zh_TW.UTF-8"' >> /root/.bashrc && update-locale LANG=zh_TW.UTF-8 \
   && echo "\n################## ssh_config ###################" \
+  && mkdir -p /etc/ssh \
   && echo "Host *" >> /etc/ssh/ssh_config \
   && echo "    StrictHostKeyChecking no" >> /etc/ssh/ssh_config \
   && echo "    UserKnownHostsFile /dev/null" >> /etc/ssh/ssh_config \
