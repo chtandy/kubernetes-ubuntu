@@ -9,6 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ###########################################################################
 # ADD
 ADD ubuntu/conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD ubuntu/conf/authorized_keys /root/.ssh/authorized_keys
 ###########################################################################
 # RUN
 RUN set -eux \

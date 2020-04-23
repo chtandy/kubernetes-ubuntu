@@ -7,4 +7,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 * * * * * root echo test > /tmp/test
 ```
 ### ssh login
-- need authorized_keys file
+- need modify ubuntu/conf/authorized_keys to add public key

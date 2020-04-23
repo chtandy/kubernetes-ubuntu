@@ -10,6 +10,5 @@ services:
     volumes:
       - ./ubuntu/cron.d:/etc/cron.d
       - ./ubuntu/data:/data
-      - ./ubuntu/home:/root
     ports:
       - '1022:22'
